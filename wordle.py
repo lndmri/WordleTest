@@ -1,28 +1,19 @@
 import random
+WORDLIST = ['rock','fish','lime','this','that','live','flew','jump']
+wordToGuess = 'rock'
+guesses = 10
 
-words = ["this",]
+def checkWord(word):
+    guessedletters = word
+    wordletters = wordToGuess
+    res = [0,0]
+    for i in range(0,4):
+        if (guessedletters[i] == wordletters[i]):
+            res[0] += 1       
+        elif(guessedletters[i] in wordletters):
+            res[1] += 1
+    return res
 
-hidden_word = random.choice(word)
-
-def check_word(guess):
-    if hidden_word == guess:
-        print("Congrats! You did it") 
-        return True
-    else:
-        result = ""
-        for i,j in zip(guess, hidden_word):
-            if i==j:
-                result = result + "C "
-
-def main():
-    attmpt = 5
-    give_instructions()
-    while (attempt > 0):
-        guess = input("Enter four letter word")
-        if check_word(guess):
-            break
-        else:
-            arrempt -= 1 #attempt = attempt - 1
-            print(f"You have {attempt} attempts left")
-    else:
-        print("GAME OVER")
+while (guesses > 0):
+    guess = input(">>>")
+    print(f"{guess}\t{checkWord(guess)}")
