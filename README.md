@@ -1,21 +1,12 @@
 # WordleTest
-# Project Title
 
 ## Description
-< describe the project >
-
-## ScreenShots
-()[]
-
-## Links(Optional)
+This is a project in progress. The gaol is to implement a wordle game that runs in the CLI
 
 ## Technologies used
-< list languages used and other sources >
+Phython
 
 ## Credits
 - [GDSC's Repo](https://github.com/USFGDSC/Py-wordle)
 
 
-<p align=center>
-Created with ❤️ in DevShops
-</p>
